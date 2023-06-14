@@ -64,16 +64,16 @@ function SimpleSlider(props) {
   };
 
   return (
-    <div class="rangeslider-hc7">
+    <div class={props.smallMargins ? "rangeslider-hc7 small-margins" : "rangeslider-hc7"}>
       <div>
-        <div class="rangeslider-jn7">
-          <div class="rangeslider-ty3" ref={sliderTrack}></div>
+        <div className="rangeslider-jn7">
+          <div className="rangeslider-ty3" ref={sliderTrack}></div>
 
           <div
-            class="rangeslider-vs7"
+            className="rangeslider-vs7"
             style={{ left: "0%", width: buttonPos + "%" }}
           ></div>
-          <div class="rangeslider-af3" onPointerDown={handleButton}>
+          <div className="rangeslider-af3" onPointerDown={handleButton}>
             <SliderButton
               buttonPos={buttonPos}
               handleDrag={handleDrag}

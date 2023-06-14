@@ -101,6 +101,7 @@ if (largeView) {
       sliderPositionInit={mobileSliderRef.current}
       updateSliderPosition={handleMobileSliderChange}
       labelDisabled={true}
+      smallMargins={true}
     />
     </div>
      <div className="date-pickers-all-re2" style={{width: mobileViewWidth + "px"}}>
@@ -119,6 +120,7 @@ if (largeView) {
       sliderPositionInit={singlePanelSliderRef.current}
       updateSliderPosition={handleSinglePanelChange}
       labelDisabled={true}
+      smallMargins={true}
     />
     </div>
   <div className="date-pickers-all-re3" style={{width: singlePanelWidth + "px"}}>
@@ -136,6 +138,7 @@ if (largeView) {
      sliderPositionInit={doublePanelSliderRef.current}
      updateSliderPosition={handleDoublePanelChange}
      labelDisabled={true}
+     smallMargins={true}
    />
    </div>
  <div className="date-pickers-all-re3" style={{width: doublePanelWidth + "px"}}>

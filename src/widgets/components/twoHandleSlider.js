@@ -107,18 +107,18 @@ function TwoHandleSlider(props) {
   };
 
   return (
-    <div class="rangeslider-hc7">
+    <div className="rangeslider-hc7">
       <div>
-        <div class="rangeslider-jn7">
-          <div class="rangeslider-ty3" ref={sliderTrack}></div>
+        <div className="rangeslider-jn7">
+          <div className="rangeslider-ty3" ref={sliderTrack}></div>
           <div
-            class="rangeslider-vs7"
+            className="rangeslider-vs7"
             style={{
               left: leftButtonPos + "%",
               width: rightButtonPos - leftButtonPos + "%",
             }}
           ></div>
-          <div class="rangeslider-af3" onPointerDown={handlePointerDown}>
+          <div className="rangeslider-af3" onPointerDown={handlePointerDown}>
             <SliderButton
               buttonPos={leftButtonPos}
               handleDrag={handleLeftDrag}

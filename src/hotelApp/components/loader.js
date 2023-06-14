@@ -45,7 +45,7 @@ function Loader(props) {
 
   return (
     <div
-      class="cezhrh0 dir dir-ltr"
+      className="cezhrh0 dir dir-ltr"
       style={{
         whiteSpace: "nowrap",
         position: "absolute",
@@ -58,9 +58,9 @@ function Loader(props) {
       }}
       aria-hidden="false"
     >
-      <div class="copf0za_loader dir dir-ltr">
+      <div className="copf0za_loader dir dir-ltr">
         <div
-          class="c15e4bhw ctbkggg dir dir-ltr"
+          className="c15e4bhw ctbkggg dir dir-ltr"
           style={{
             height: "40px",
             display: "flex",
@@ -68,23 +68,23 @@ function Loader(props) {
             alignItems: "center",
           }}
         >
-          <div class="_1b2klj3_loader" style={{ transform: "translateX(0px)" }}>
+          <div className="_1b2klj3_loader" style={{ transform: "translateX(0px)" }}>
             <span
-              class="_1k9ksvh_loader"
+              className="_1k9ksvh_loader"
               style={{
                 transition: "transform 850ms linear 0s",
                 transform: "scale(" + dotScale1 + ")",
               }}
             ></span>
             <span
-              class="_1k9ksvh_loader"
+              className="_1k9ksvh_loader"
               style={{
                 transform: "scale(" + dotScale2 + ")",
                 transition: "transform 850ms linear 0s",
               }}
             ></span>
             <span
-              class="_1k9ksvh_loader"
+              className="_1k9ksvh_loader"
               style={{
                 transform: "scale(" + dotScale3 + ")",
                 transition: "transform 850ms linear 0s",

@@ -41,12 +41,12 @@ function LinkModal(props) {
             <button
               aria-label="Close"
               type="button"
-              class="link-modal-oda"
+              className="link-modal-oda"
               onClick={closeModal}
             >
-              <span class="link-modal-e29">
+              <span className="link-modal-e29">
                 <svg
-                  class="link-modal-ka0"
+                  className="link-modal-ka0"
                   viewBox="0 0 32 32"
                   xmlns="http://www.w3.org/2000/svg"
                   aria-hidden="true"
@@ -59,11 +59,11 @@ function LinkModal(props) {
               </span>
             </button>
           </div>
-          <div class="link-modal-z4l">
+          <div className="link-modal-z4l">
             <header className="link-modal-sj7">
               <div className="link-modal-lw2">link clicked</div>
             </header>
-            <div class="link-modal-hs6">link to {props.activeLink}</div>
+            <div className="link-modal-hs6">link to {props.activeLink}</div>
           </div>
         </div>
       </div>

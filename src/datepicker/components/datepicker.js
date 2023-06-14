@@ -541,7 +541,7 @@ function DatePicker(props) {
                   inPast ? null : (e) => dateHover(e, calendarData[j])
                 }
               >
-                <div class="_h84ua7">
+                <div className="_h84ua7">
                   <div class={overflowForward ? "_qxze2vs" : "_2ehw1pm"}></div>
                   <div
                     class={style2}
@@ -594,19 +594,19 @@ function DatePicker(props) {
       // add render elements around rows of dotm
       const monthRender = [
         <div
-          class="_ytfarf"
+          className="_ytfarf"
           style={{ padding: "0px 27px" }}
           data-visible="true"
         >
-          <div class="_ihvjx2">
+          <div className="_ihvjx2">
             <section>
-              <h2 tabindex="-1" class="_14i3z6h" elementtiming="LCP-target">
+              <h2 tabindex="-1" className="_14i3z6h" elementtiming="LCP-target">
                 {monthData.monthName}
               </h2>
             </section>
           </div>
           <table
-            class="_cvkwaj"
+            className="_cvkwaj"
             style={{ borderSpacing: "0px 2px" }}
             role="presentation"
           >
@@ -621,18 +621,18 @@ function DatePicker(props) {
         <div>
           <div
             style={{ padding: "0px 13px" }}
-            class="_ytfarf"
+            className="_ytfarf"
             data-visible="true"
           >
-            <div class="_t720qti">
+            <div className="_t720qti">
               <section>
-                <h2 tabindex="-1" class="_14i3z6h" elementtiming="LCP-target">
+                <h2 tabindex="-1" className="_14i3z6h" elementtiming="LCP-target">
                   {monthData.monthName}
                 </h2>
               </section>
             </div>
             <table
-              class="_cvkwaj"
+              className="_cvkwaj"
               style={{ borderSpacing: "0px 2px" }}
               role="presentation"
             >
@@ -662,14 +662,14 @@ function DatePicker(props) {
 if (calendarData) {
   if (props.largeView) {
     return (
-      <div class="_kasbqg">
+      <div className="_kasbqg">
         <div>
           <div>
-            <div class="c1nifi44 fuhmdl6 l16t0m55 dir dir-ltr">
+            <div className="c1nifi44 fuhmdl6 l16t0m55 dir dir-ltr">
               <section>
-                <div class="dir dir-ltr">
-                  <div class="_1avex2v">
-                    <div class="_u02imw">
+                <div className="dir dir-ltr">
+                  <div className="_1avex2v">
+                    <div className="_u02imw">
                       <div id="tabs" aria-label="">
                         <div>
                           <div
@@ -677,11 +677,11 @@ if (calendarData) {
                             onMouseOver={() => dateContainerHover()}
                             onMouseLeave={() => dateContainerHover()}
                           >
-                            <div class="_65d865">
-                              <div class="dhjkeof dir dir-ltr">
-                                <div class="_3hmsj">
+                            <div className="_65d865">
+                              <div className="dhjkeof dir dir-ltr">
+                                <div className="_3hmsj">
                                   <div
-                                    class="_g2s11rv"
+                                    className="_g2s11rv"
                                     style={
                                       props.doublePanel
                                         ? {
@@ -713,21 +713,21 @@ if (calendarData) {
                                         }
                                       >
                                         <div
-                                          class="_1x76l5m3"
+                                          className="_1x76l5m3"
                                           aria-hidden="true"
                                           role="presentation"
                                         >
                                           <div
-                                            class="_2cafln"
+                                            className="_2cafln"
                                             style={{
                                               left: "0px",
                                               padding: "0px 27px",
                                             }}
                                           >
-                                            <ul class="_xv14sf">
+                                            <ul className="_xv14sf">
                                               {dotwArray.map((x) => (
                                                 <li
-                                                  class="_92xroi"
+                                                  className="_92xroi"
                                                   style={{
                                                     width: props.doublePanel
                                                       ? doublePanelDimensions.dotwWidth
@@ -742,7 +742,7 @@ if (calendarData) {
                                           </div>
                                           {props.doublePanel ? (
                                             <div
-                                              class="_2cafln"
+                                              className="_2cafln"
                                               style={{
                                                 left:
                                                   sliderTrackDimensions.horizontalMovement +
@@ -750,10 +750,10 @@ if (calendarData) {
                                                 padding: "0px 27px",
                                               }}
                                             >
-                                              <ul class="_xv14sf">
+                                              <ul className="_xv14sf">
                                                 {dotwArray.map((x) => (
                                                   <li
-                                                    class="_92xroi"
+                                                    className="_92xroi"
                                                     style={{
                                                       width:
                                                         doublePanelDimensions.dotwWidth +
@@ -768,18 +768,18 @@ if (calendarData) {
                                           ) : null}
                                         </div>
                                         <div
-                                          class="_14676s3"
+                                          className="_14676s3"
                                           tabindex="-1"
                                           role="application"
                                           aria-label="Calendar"
                                         >
-                                          <div class="_5neba7a">
-                                            <div class="_1d1qzab">
+                                          <div className="_5neba7a">
+                                            <div className="_1d1qzab">
                                               <button
                                                 aria-disabled="false"
                                                 aria-label="Go back to switch to the previous month."
                                                 type="button"
-                                                class="_oda838"
+                                                className="_oda838"
                                                 onClick={moveBack}
                                                 disabled={
                                                   currentMonth < 2
@@ -787,7 +787,7 @@ if (calendarData) {
                                                     : false
                                                 }
                                               >
-                                                <span class="_e296pg">
+                                                <span className="_e296pg">
                                                   <svg
                                                     viewBox="0 0 18 18"
                                                     role="presentation"
@@ -809,12 +809,12 @@ if (calendarData) {
                                               </button>
                                             </div>
 
-                                            <div class="_qz9x4fc">
+                                            <div className="_qz9x4fc">
                                               <button
                                                 aria-disabled="false"
                                                 aria-label="Move forward to change to the next month."
                                                 type="button"
-                                                class="_oda838"
+                                                className="_oda838"
                                                 onClick={moveForward}
                                                 disabled={
                                                   currentMonth > 22
@@ -822,7 +822,7 @@ if (calendarData) {
                                                     : false
                                                 }
                                               >
-                                                <span class="_e296pg">
+                                                <span className="_e296pg">
                                                   <svg
                                                     viewBox="0 0 18 18"
                                                     role="presentation"
@@ -848,7 +848,7 @@ if (calendarData) {
                                         {props.doublePanel
                                           ? [
                                               <div
-                                                class="_1foj6yps"
+                                                className="_1foj6yps"
                                                 style={{
                                                   width:
                                                     doublePanelDimensions.outerContainer2 +
@@ -858,7 +858,7 @@ if (calendarData) {
                                                 }}
                                               >
                                                 <div
-                                                  class="_2hyui6e"
+                                                  className="_2hyui6e"
                                                   style={trackStyle}
                                                 >
                                                   <div
@@ -873,7 +873,7 @@ if (calendarData) {
                                                       tempCheckout
                                                     )}
                                                   </div>
-                                                  <div class="_1lds9wb">
+                                                  <div className="_1lds9wb">
                                                     {monthRender(
                                                       calendarData[
                                                         currentMonth
@@ -882,7 +882,7 @@ if (calendarData) {
                                                       tempCheckout
                                                     )}
                                                   </div>
-                                                  <div class="_1lds9wb">
+                                                  <div className="_1lds9wb">
                                                     {monthRender(
                                                       calendarData[
                                                         currentMonth + 1
@@ -905,7 +905,7 @@ if (calendarData) {
                                             ]
                                           : [
                                               <div
-                                                class="_1foj6yps"
+                                                className="_1foj6yps"
                                                 style={{
                                                   width:
                                                     singlePanelDimensions.outerContainer2 +
@@ -915,7 +915,7 @@ if (calendarData) {
                                                 }}
                                               >
                                                 <div
-                                                  class="_2hyui6e"
+                                                  className="_2hyui6e"
                                                   style={trackStyle}
                                                 >
                                                   <div
@@ -930,7 +930,7 @@ if (calendarData) {
                                                       tempCheckout
                                                     )}
                                                   </div>
-                                                  <div class="_1lds9wb">
+                                                  <div className="_1lds9wb">
                                                     {monthRender(
                                                       calendarData[
                                                         currentMonth
@@ -971,22 +971,22 @@ if (calendarData) {
     );
   } else {
     return (
-      <section class="biod118 dir dir-ltr" aria-hidden="false">
-        <div class="dp1cp1f dir dir-ltr" style={{ top: "148px" }}>
-          <div class="_1h0hirz"
+      <section className="biod118 dir dir-ltr" aria-hidden="false">
+        <div className="dp1cp1f dir dir-ltr" style={{ top: "148px" }}>
+          <div className="_1h0hirz"
             onMouseOver={() => dateContainerHover()}
             onMouseLeave={() => dateContainerHover()}
             >
-            <div class="_1mfsr54">
-              <div class="_1y26gh8o">
+            <div className="_1mfsr54">
+              <div className="_1y26gh8o">
                 <div>
                   <div>
-                    <div class="_e296pg" aria-hidden="true" role="presentation">
-                      <div class="_1kypzrpr">
-                        <ul class="_xv14sf">
+                    <div className="_e296pg" aria-hidden="true" role="presentation">
+                      <div className="_1kypzrpr">
+                        <ul className="_xv14sf">
                           {dotwArray.map((x) => (
                             <li
-                              class="_92xroi"
+                              className="_92xroi"
                               style={{
                                 width: pickerDimensions.dotw + "px",
                               }}
@@ -998,15 +998,15 @@ if (calendarData) {
                       </div>
                     </div>
                     <div
-                      class="_14676s3"
+                      className="_14676s3"
                       tabindex="-1"
                       role="application"
                       aria-label="Calendar"
                     >
-                      <div class="_9xlqonb">
+                      <div className="_9xlqonb">
                         {calendarData ? (
                           <div
-                            class="_1s79stsj"
+                            className="_1s79stsj"
                             style={{
                               transform: "translateY(0px)",
                               width: pickerDimensions.outer + "px",
@@ -1017,11 +1017,11 @@ if (calendarData) {
                         ) : null}
 
                         {visibleMonths < 24 ? (
-                          <div class="_gor68n">
-                            <div class="_1l06a80">
+                          <div className="_gor68n">
+                            <div className="_1l06a80">
                               <button
                                 type="button"
-                                class="_snbhip0"
+                                className="_snbhip0"
                                 onClick={loadMoreDates}
                               >
                                 Load more dates

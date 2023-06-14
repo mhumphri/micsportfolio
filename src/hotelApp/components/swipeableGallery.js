@@ -124,7 +124,7 @@ function SwipeableGallery(props) {
 
     const newRender = (
       <div
-        class="swipeable-gallery-1b2"
+        className="swipeable-gallery-1b2"
         style={{ transform: "translateX(" + dotsPosition + "px)" }}
       >
         {newDots}
@@ -188,31 +188,31 @@ function SwipeableGallery(props) {
 
   if (touchScreen) {
     return (
-      <div class="swipeable-gallery-c14d">
-        <div class="swipeable-gallery-o1q">
+      <div className="swipeable-gallery-c14d">
+        <div className="swipeable-gallery-o1q">
           <div />
 
-          <div class="swipeable-gallery-b1t">
-            <div class="swipeable-gallery-byc"></div>
-            <div class="swipeable-gallery-bal">
-              <div role="img" class="swipeable-gallery-r75">
-                <div class="swipeable-gallery-szn">
+          <div className="swipeable-gallery-b1t">
+            <div className="swipeable-gallery-byc"></div>
+            <div className="swipeable-gallery-bal">
+              <div role="img" className="swipeable-gallery-r75">
+                <div className="swipeable-gallery-szn">
                   {dotsRender(currentPhoto)}
                 </div>
               </div>
             </div>
-            <div class="swipeable-gallery-b18"></div>
+            <div className="swipeable-gallery-b18"></div>
           </div>
         </div>
 
-        <div class="swipeable-gallery-cw9">
+        <div className="swipeable-gallery-cw9">
           <div
-            class="swipeable-gallery-c14w"
+            className="swipeable-gallery-c14w"
             onScroll={onGalleryScroll}
             ref={galleryRef}
           >
             {props.photos.map((x) => (
-              <div class="swipeable-gallery-rfe">
+              <div className="swipeable-gallery-rfe">
                 <div className="swipeable-gallery-tz4">
                   <img className="swipeable-gallery-uc3" alt="alt" src={x} />
                 </div>
@@ -225,18 +225,18 @@ function SwipeableGallery(props) {
   } else {
     return (
       <div
-        class="swipeable-gallery-c14d"
+        className="swipeable-gallery-c14d"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
 
 
-        <div class="swipeable-gallery-o1q">
+        <div className="swipeable-gallery-o1q">
           <div />
-          {props.itemLoading? null : <div class="swipeable-gallery-m1d">
-            <div class="swipeable-gallery-m1t">
+          {props.itemLoading? null : <div className="swipeable-gallery-m1d">
+            <div className="swipeable-gallery-m1t">
               <div class={lhsChevronStyle}>
-                <button class="swipeable-gallery-1d3" onClick={scrollLeft}>
+                <button className="swipeable-gallery-1d3" onClick={scrollLeft}>
                   <svg
                     className="swipeable-gallery-cl1"
                     viewBox="0 0 32 32"
@@ -249,9 +249,9 @@ function SwipeableGallery(props) {
                 </button>
               </div>
             </div>
-            <div class="swipeable-gallery-ms8">
+            <div className="swipeable-gallery-ms8">
               <div class={rhsChevronStyle}>
-                <button class="swipeable-gallery-1d3" onClick={scrollRight}>
+                <button className="swipeable-gallery-1d3" onClick={scrollRight}>
                   <svg
                     className="swipeable-gallery-cl1"
                     viewBox="0 0 32 32"
@@ -265,26 +265,26 @@ function SwipeableGallery(props) {
               </div>
             </div>
           </div> }
-          {props.itemLoading? null : <div class="swipeable-gallery-b1t">
-            <div class="swipeable-gallery-byc"></div>
-            <div class="swipeable-gallery-bal">
-              <div role="img" class="swipeable-gallery-r75">
-                <div class="swipeable-gallery-szn">
+          {props.itemLoading? null : <div className="swipeable-gallery-b1t">
+            <div className="swipeable-gallery-byc"></div>
+            <div className="swipeable-gallery-bal">
+              <div role="img" className="swipeable-gallery-r75">
+                <div className="swipeable-gallery-szn">
                   {dotsRender(currentPhoto)}
                 </div>
               </div>
             </div>
-            <div class="swipeable-gallery-b18"></div>
+            <div className="swipeable-gallery-b18"></div>
           </div> }
         </div>
-        <div class="swipeable-gallery-cw9">
+        <div className="swipeable-gallery-cw9">
           <div
-            class="swipeable-gallery-c14w"
+            className="swipeable-gallery-c14w"
             onScroll={onGalleryScroll}
             ref={galleryRef}
           >
             {props.photos.map((x) => (
-              <div class="swipeable-gallery-rfe">
+              <div className="swipeable-gallery-rfe">
                 <div className="swipeable-gallery-tz4">
                   <img className="swipeable-gallery-uc3" alt="alt" src={x} />
                 </div>

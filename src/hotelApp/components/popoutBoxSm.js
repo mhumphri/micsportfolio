@@ -15,36 +15,36 @@ function PopoutBoxSm(props) {
           : "popout-box-sm-yr3"
       }
     >
-      <div class="popout-box-sm-pm1" onClick={props.removeLargeMarker} />
+      <div className="popout-box-sm-pm1" onClick={props.removeLargeMarker} />
       <div
-        class="popout-box-sm-zt8"
+        className="popout-box-sm-zt8"
         onClick={() => props.setActiveLink("/hotels/" + props.markerData.key)}
       >
-        <div class="popout-box-sm-ks9">
-          <div class="popout-box-sm-he6">
+        <div className="popout-box-sm-ks9">
+          <div className="popout-box-sm-he6">
             <img
-              class="popout-box-sm-ja7"
+              className="popout-box-sm-ja7"
               alt="alt"
               src={props.markerData.photos[0]}
             />
           </div>
-          <div class="popout-box-sm-fr3">
+          <div className="popout-box-sm-fr3">
             <div>
-              <div class="popout-box-sm-jh3">{props.markerData.name}</div>
+              <div className="popout-box-sm-jh3">{props.markerData.name}</div>
 
-              <div class="popout-box-sm-jh4">{props.markerData.locationName}</div>
+              <div className="popout-box-sm-jh4">{props.markerData.locationName}</div>
             </div>
 
             <div>
-              <div class="popout-box-sm-pp1">
-                <div class="popout-box-sm-ll2">
-                  <span class="popout-box-sm-al5">
+              <div className="popout-box-sm-pp1">
+                <div className="popout-box-sm-ll2">
+                  <span className="popout-box-sm-al5">
                     £{props.markerData.price}
                   </span>{" "}
                   {screenWidth < 400 ? "night" : "per night"}
                 </div>
 
-                <div class="popout-box-sm-hh3">
+                <div className="popout-box-sm-hh3">
                   <svg
                     viewBox="0 0 32 32"
                     xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +60,7 @@ function PopoutBoxSm(props) {
                       fill-rule="evenodd"
                     ></path>
                   </svg>
-                  <div class="popout-box-sm-ma1">
+                  <div className="popout-box-sm-ma1">
                     {props.markerData.rating}{" "}
                     {screenWidth < 400
                       ? null
@@ -72,7 +72,7 @@ function PopoutBoxSm(props) {
           </div>
         </div>
       </div>
-      <div class="popout-box-sm-pm1" onClick={props.removeLargeMarker} />
+      <div className="popout-box-sm-pm1" onClick={props.removeLargeMarker} />
     </div>
   );
 }

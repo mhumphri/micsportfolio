@@ -230,7 +230,7 @@ function HotelApp(props) {
         if (numberHotels>269) {
           finalPageHotels = 18
         }
-        // if total number of hotles is below 270, the number of hotels which will appear in the final page is calculated 
+        // if total number of hotles is below 270, the number of hotels which will appear in the final page is calculated
         else {
           finalPageHotels = numberHotels - (maxPages - 1) * 18;
         }
@@ -278,7 +278,7 @@ function HotelApp(props) {
       />
 
       <main className="search-map-cy5">
-        <div class="search-map-1hy">
+        <div className="search-map-1hy">
           {/* lowers position of button when screen height is low */}
           <div
             className={
@@ -290,12 +290,12 @@ function HotelApp(props) {
             {expandMapView ? (
               <button
                 type="button"
-                class="search-map-174"
+                className="search-map-174"
                 onClick={toggleMapView}
               >
-                <span class="search-map-7u6">
-                  <span class="search-map-r16">Show list</span>
-                  <div class="search-map-hqs">
+                <span className="search-map-7u6">
+                  <span className="search-map-r16">Show list</span>
+                  <div className="search-map-hqs">
                     <svg
                       className="search-map-sd2"
                       viewBox="0 0 16 16"
@@ -316,12 +316,12 @@ function HotelApp(props) {
             {!expandMapView && mapButtonActive && !dataLoading ? (
               <button
                 type="button"
-                class="search-map-174"
+                className="search-map-174"
                 onClick={toggleMapView}
               >
-                <span class="search-map-7u6">
-                  <span class="search-map-r16">Show map</span>
-                  <div class="search-map-hqs">
+                <span className="search-map-7u6">
+                  <span className="search-map-r16">Show map</span>
+                  <div className="search-map-hqs">
                     <svg
                       className="search-map-sd2"
                       viewBox="0 0 16 16"

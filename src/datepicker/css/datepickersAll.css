@@ -57,19 +57,12 @@ flex-direction: column;
 }
 
 .date-pickers-all-uu9 {
-
   height: 650px;
   position: relative;
-
-  /* border: solid 1px; */
-
-	/* box-shadow: 0 0 0 1px rgba(0,0,0,0.04),0 8px 16px rgba(0,0,0,0.15); */
-
-
 }
 
 .date-pickers-all-re3 {
-  margin: 20px 0;
+    margin: 20px 0;
   height: auto;
   position: relative;
   /* border: solid 1px; */

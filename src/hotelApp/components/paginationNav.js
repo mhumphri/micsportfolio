@@ -83,7 +83,7 @@ function PaginationNav(props) {
               aria-disabled="true"
               role="link"
               type="button"
-              class="_u60i7ub"
+              className="_u60i7ub"
               onClick={() => props.goToPage(renderArray[i])}
             >
               {renderArray[i]}
@@ -94,7 +94,7 @@ function PaginationNav(props) {
         else if (renderArray[i] && renderArray[i] !== props.activePage) {
           newPaginationRender.push(
             <button
-              class="_833p2h"
+              className="_833p2h"
               onClick={() => props.goToPage(renderArray[i])}
             >
               {renderArray[i]}
@@ -103,7 +103,7 @@ function PaginationNav(props) {
         }
         // render for elipsis (which separates groups of page number buttons)
         else {
-          newPaginationRender.push(<span class="_3bjjf5">…</span>);
+          newPaginationRender.push(<span className="_3bjjf5">…</span>);
         }
       }
       setPaginationRender(newPaginationRender);
@@ -120,12 +120,12 @@ function PaginationNav(props) {
           aria-disabled="true"
           role="link"
           type="button"
-          class="page-nav-zh2"
+          className="page-nav-zh2"
           disabled={prevChevron ? false : true}
           onClick={() => props.goToPage(props.activePage - 1)}
         >
           <svg
-            class="page-nav-ow2"
+            className="page-nav-ow2"
             viewBox="0 0 32 32"
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
@@ -141,12 +141,12 @@ function PaginationNav(props) {
         {paginationRender}
         <button
           aria-label="Next"
-          class="page-nav-pt3"
+          className="page-nav-pt3"
           disabled={nextChevron ? false : true}
           onClick={() => props.goToPage(props.activePage + 1)}
         >
           <svg
-            class="page-nav-ow2"
+            className="page-nav-ow2"
             viewBox="0 0 32 32"
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
@@ -164,18 +164,18 @@ function PaginationNav(props) {
     return (
       <div className="page-nav-sj2">
         <div className="page-nav-al1">
-          <div class="page-nav-j4d" role="navigation" aria-label="pagination">
-            <div class="page-nav-1wg">
+          <div className="page-nav-j4d" role="navigation" aria-label="pagination">
+            <div className="page-nav-1wg">
               <button
                 aria-disabled={prevChevron ? "false" : "true"}
                 aria-label="Previous page"
                 type="button"
-                class="page-nav-1kj"
+                className="page-nav-1kj"
                 disabled={prevChevron ? false : true}
                 onClick={() => props.goToPage(props.activePage - 1)}
               >
                 <svg
-                  class="page-nav-lx7"
+                  className="page-nav-lx7"
                   viewBox="0 0 32 32"
                   xmlns="http://www.w3.org/2000/svg"
                   aria-hidden="true"
@@ -188,16 +188,16 @@ function PaginationNav(props) {
                 </svg>
               </button>
             </div>
-            <div class="page-nav-1wg">
+            <div className="page-nav-1wg">
               <button
                 aria-disabled={nextChevron ? "false" : "true"}
                 aria-label="Next page"
-                class="page-nav-1kj"
+                className="page-nav-1kj"
                 disabled={nextChevron ? false : true}
                 onClick={() => props.goToPage(props.activePage + 1)}
               >
                 <svg
-                  class="page-nav-lx7"
+                  className="page-nav-lx7"
                   viewBox="0 0 32 32"
                   xmlns="http://www.w3.org/2000/svg"
                   aria-hidden="true"

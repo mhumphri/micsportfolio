@@ -6,7 +6,7 @@ const crossButton = (clickFunction) => {
 
   return [
 
-        <button aria-label="Clear Input" type="button" class="cross_button_10r" onClick={clickFunction} >
+        <button aria-label="Clear Input" type="button" className="cross_button_10r" onClick={clickFunction} >
 
             <svg
               viewBox="0 0 32 32"

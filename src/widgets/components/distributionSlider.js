@@ -75,14 +75,14 @@ function DistributionSlider(props) {
       if (i >= newLowValue && i <= newHighValue) {
         newDistributionRender.push(
           <div
-            class="rangeslider-fi6"
+            className="rangeslider-fi6"
             style={{ height: dataDistribution[i] * barScalingFactor + "px" }}
           />
         );
       } else {
         newDistributionRender.push(
           <div
-            class="rangeslider-fi6 off"
+            className="rangeslider-fi6 off"
             style={{ height: dataDistribution[i] * barScalingFactor + "px" }}
           />
         );
@@ -163,19 +163,19 @@ function DistributionSlider(props) {
   };
 
   return (
-    <div class="rangeslider-lx4">
-      <div class="rangeslider-ds2">
-        <div class="rangeslider-1da">{distributionRender}</div>
-        <div class="rangeslider-jn7">
-          <div class="rangeslider-ty3 narrow" ref={sliderTrack}></div>
+    <div className="rangeslider-lx4">
+      <div className="rangeslider-ds2">
+        <div className="rangeslider-1da">{distributionRender}</div>
+        <div className="rangeslider-jn7">
+          <div className="rangeslider-ty3 narrow" ref={sliderTrack}></div>
           <div
-            class="rangeslider-vs7 narrow"
+            className="rangeslider-vs7 narrow"
             style={{
               left: leftButtonPos + "%",
               width: rightButtonPos - leftButtonPos + "%",
             }}
           ></div>
-          <div class="rangeslider-af3" onPointerDown={handlePointerDown}>
+          <div className="rangeslider-af3" onPointerDown={handlePointerDown}>
             <SliderButton
               buttonPos={leftButtonPos}
               handleDrag={handleLeftDrag}

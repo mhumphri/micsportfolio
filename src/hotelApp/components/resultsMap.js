@@ -563,11 +563,11 @@ function ResultsMap(props) {
   });
 
   return (
-    <div class="m15dgkuj dir dir-ltr">
-      <div class="c1yo0219 dir dir-ltr">
+    <div className="m15dgkuj dir dir-ltr">
+      <div className="c1yo0219 dir dir-ltr">
         <div>
           <div>
-            <div class="c12zlp1w dir dir-ltr">
+            <div className="c12zlp1w dir dir-ltr">
               <div
                 aria-hidden="false"
                 style={{
@@ -580,7 +580,7 @@ function ResultsMap(props) {
               >
                 {props.largeView ? (
                   <div
-                    class="cezhrh0 c1aiokyr dir dir-ltr"
+                    className="cezhrh0 c1aiokyr dir dir-ltr"
                     style={{
                       whiteSpace: "nowrap",
                       position: "absolute",
@@ -594,18 +594,18 @@ function ResultsMap(props) {
                     }}
                     aria-hidden="false"
                   >
-                    <div class="copf0za dir dir-ltr">
+                    <div className="copf0za dir dir-ltr">
                       <div
-                        class="c15e4bhw ctbkggg dir dir-ltr"
+                        className="c15e4bhw ctbkggg dir dir-ltr"
                         style={{ height: "40px", flexDirection: "row" }}
                       >
                         <button
                           aria-label="Expand map and collapse list view"
                           type="button"
-                          class="b117oblx dir dir-ltr"
+                          className="b117oblx dir dir-ltr"
                           onClick={props.toggleMapView}
                         >
-                          <div class="l1pjhd3s dir dir-ltr">
+                          <div className="l1pjhd3s dir dir-ltr">
                             <svg
                               className="search-map-mz1"
                               viewBox="0 0 32 32"
@@ -624,8 +624,8 @@ function ResultsMap(props) {
                             </svg>
                           </div>
                           {props.expandMapView ? (
-                            <div class="l177lde9 dir dir-ltr">
-                              <span class="l1pncren dir dir-ltr">
+                            <div className="l177lde9 dir dir-ltr">
+                              <span className="l1pncren dir dir-ltr">
                                 Show list
                               </span>
                             </div>

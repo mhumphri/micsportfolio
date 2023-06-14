@@ -34,7 +34,7 @@ function TopNav(props) {
           <a className="topnav-lb9" href="https://github.com/mhumphri/micsportfolio" target="_blank" rel="noreferrer" >
             <img
               alt="GitHub Logomark"
-              class="topnav-ek4"
+              className="topnav-ek4"
               src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
             />
           </a>

@@ -5,7 +5,7 @@ import "../css/rangeSlider.css";
 // range slider with resticted units (e.g. only 10,20, 30... can be selected by the user)
 
 function DiscreetSlider(props) {
-  
+
 
   // stores position of slider button (scale 0  to 100)
   const [buttonPos, setButtonPos] = useState(50);
@@ -45,12 +45,12 @@ function DiscreetSlider(props) {
   };
 
   return (
-    <div class="rangeslider-hc7">
+    <div className="rangeslider-hc7">
       <div>
-        <div class="rangeslider-jn7">
-          <div class="rangeslider-ty3 wide" ref={sliderTrack} />
+        <div className="rangeslider-jn7">
+          <div className="rangeslider-ty3 wide" ref={sliderTrack} />
           <div
-            class="rangeslider-vs7 wide"
+            className="rangeslider-vs7 wide"
             style={{ left: "0%", width: buttonPos + "%" }}
           ></div>
 
@@ -63,7 +63,7 @@ function DiscreetSlider(props) {
             />
           ))}
 
-          <div class="rangeslider-af3" onPointerDown={handleButton}>
+          <div className="rangeslider-af3" onPointerDown={handleButton}>
             <SliderButton
               buttonPos={buttonPos}
               handleDrag={handleDrag}
