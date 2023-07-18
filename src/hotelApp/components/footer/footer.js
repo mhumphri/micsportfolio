@@ -52,20 +52,20 @@ function Footer(props) {
       let linksColumn = [];
       for (let j = 0; j < columnData.length; j++) {
         linksColumn.push(
-          <li class="footer-wmu">
-        {/*  <a href={columnData[j].href} class="_1e6wtwm5"> */}
-        <span class="footer-1e6">
+          <li className="footer-wmu" key={columnData[j].name}>
+        {/*  <a href={columnData[j].href} className="_1e6wtwm5"> */}
+        <span className="footer-1e6">
               {columnData[j].name}
             </span>
           </li>
         );
       }
       footerRender.push(
-        <section class="footer-1l3">
-          <div class="footer-x6q">
-            <h3 class="footer-otc">{linksData[i].header}</h3>
+        <section className="footer-1l3" key={linksData[i].header}>
+          <div className="footer-x6q">
+            <h3 className="footer-otc">{linksData[i].header}</h3>
           </div>
-          <ul class="footer-yuo">{linksColumn}</ul>
+          <ul className="footer-yuo">{linksColumn}</ul>
         </section>
       );
     }
@@ -75,9 +75,9 @@ function Footer(props) {
 if (props.largeView) {
     return (
 
-        <footer class="footer-1fa">
-          <div class={props.narrow ? "footer-1s9" : "footer-1s9 wide"}>
-            <div class="footer-fyx">{footerRender(footerLinks)}</div>
+        <footer className="footer-1fa">
+          <div className={props.narrow ? "footer-1s9" : "footer-1s9 wide"}>
+            <div className="footer-fyx">{footerRender(footerLinks)}</div>
           </div>
         </footer>
 
@@ -86,9 +86,9 @@ if (props.largeView) {
     return (
 
 
-      <footer class="footer-1fa">
-      <div class="footer-1s9" >
-      <div class="footer-fyx">
+      <footer className="footer-1fa">
+      <div className="footer-1s9" >
+      <div className="footer-fyx">
       {footerRender(footerLinks)}
       </div>
       </div>

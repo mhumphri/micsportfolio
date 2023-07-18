@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import getHotelArrayInit from "../../hotelApp/functions/getHotelArrayInit";
 
 const initialState = {
-  hotelArray: getHotelArrayInit(),
+  hotelArray: [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
   navigateAway: false,
   savedMapData: {},
   mapBbox: false,

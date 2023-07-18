@@ -53,6 +53,7 @@ function IndListItem(props) {
       onClick={navigateToProperty}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      key={props.itemId}
     >
       <SwipeableGallery
         itemLoading={indItemLoading}
@@ -62,7 +63,7 @@ function IndListItem(props) {
         <div className="ind-list-item-pq1">
           <div className="ind-list-item-lq2">
             <span className={indItemLoading ? "ind-list-item-oa3" : ""}>
-              {props.hotelData.name}
+              {props.hotelData ? props.hotelData.name : "hotel name placeholder"}
             </span>
           </div>
 
@@ -98,11 +99,10 @@ function IndListItem(props) {
             >
               <path
                 d="M15.094 1.579l-4.124 8.885-9.86 1.27a1 1 0 0 0-.542 1.736l7.293 6.565-1.965 9.852a1 1 0 0 0 1.483 1.061L16 25.951l8.625 4.997a1 1 0 0 0 1.482-1.06l-1.965-9.853 7.293-6.565a1 1 0 0 0-.541-1.735l-9.86-1.271-4.127-8.885a1 1 0 0 0-1.814 0z"
-                fill-rule="evenodd"
               ></path>
             </svg>
             <div className="ind-list-item-ma1">
-              {props.hotelData.rating} ({props.hotelData.numReviews})
+              {props.hotelData ? props.hotelData.rating + " (" + props.hotelData.numReviews + ")" : "x.x (xxx)"}
             </div>
           </div>
         </div>
@@ -114,7 +114,7 @@ function IndListItem(props) {
                 : "ind-list-item-te8"
             }
           >
-            {props.hotelData.locationName}
+            {props.hotelData ? props.hotelData.locationName : "location  placeholder"}
           </div>
         </div>
         <div>

@@ -106,7 +106,8 @@ function SwipeableGallery(props) {
 
       newDots.push(
         <span
-          class={style}
+          key={i}
+          className={style}
           style={{ transform: "scale(" + dotScale + ")" }}
         ></span>
       );
@@ -211,8 +212,8 @@ function SwipeableGallery(props) {
             onScroll={onGalleryScroll}
             ref={galleryRef}
           >
-            {props.photos.map((x) => (
-              <div className="swipeable-gallery-rfe">
+            {props.photos.map((x, index) => (
+              <div className="swipeable-gallery-rfe" key={index}>
                 <div className="swipeable-gallery-tz4">
                   <img className="swipeable-gallery-uc3" alt="alt" src={x} />
                 </div>
@@ -235,7 +236,7 @@ function SwipeableGallery(props) {
           <div />
           {props.itemLoading? null : <div className="swipeable-gallery-m1d">
             <div className="swipeable-gallery-m1t">
-              <div class={lhsChevronStyle}>
+              <div className={lhsChevronStyle}>
                 <button className="swipeable-gallery-1d3" onClick={scrollLeft}>
                   <svg
                     className="swipeable-gallery-cl1"
@@ -250,7 +251,7 @@ function SwipeableGallery(props) {
               </div>
             </div>
             <div className="swipeable-gallery-ms8">
-              <div class={rhsChevronStyle}>
+              <div className={rhsChevronStyle}>
                 <button className="swipeable-gallery-1d3" onClick={scrollRight}>
                   <svg
                     className="swipeable-gallery-cl1"
@@ -283,8 +284,8 @@ function SwipeableGallery(props) {
             onScroll={onGalleryScroll}
             ref={galleryRef}
           >
-            {props.photos.map((x) => (
-              <div className="swipeable-gallery-rfe">
+            {props.photos.map((x, index) => (
+              <div className="swipeable-gallery-rfe" key={index}>
                 <div className="swipeable-gallery-tz4">
                   <img className="swipeable-gallery-uc3" alt="alt" src={x} />
                 </div>

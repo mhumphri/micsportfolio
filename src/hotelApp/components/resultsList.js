@@ -19,8 +19,8 @@ function ResultsList(props) {
           {props.hotelArray.map((x, index) => (
             <IndListItem
               listItemLoading={props.dataLoading}
-              key={index}
               itemId={index}
+              key={index}
               hotelData={x}
               setActiveLink={props.setActiveLink}
               hoverHotel={props.hoverHotel}

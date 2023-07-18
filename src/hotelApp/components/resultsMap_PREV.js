@@ -750,7 +750,7 @@ function ResultsMap(props) {
                     largeMarker={largeMarker}
                   />
                 ) : null}
-      <div
+                <div
                   ref={props.mapContainer}
                   id="map"
                   style={{

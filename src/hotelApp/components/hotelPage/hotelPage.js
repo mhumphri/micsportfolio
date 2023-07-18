@@ -307,7 +307,7 @@ function HotelPage(props) {
               </div>
 
               <div ref={locationRef} />
-              <LocationMap hotelData={hotelData} />
+         <LocationMap hotelData={hotelData} /> 
               <div ref={reviewsRef} />
               <Reviews hotelData={hotelData} twoColumn={true} />
             </main>

@@ -78,6 +78,7 @@ function PaginationNav(props) {
           // render for currently active page number button
           newPaginationRender.push(
             <button
+              key={i}
               aria-current="page"
               disabled=""
               aria-disabled="true"
@@ -94,6 +95,7 @@ function PaginationNav(props) {
         else if (renderArray[i] && renderArray[i] !== props.activePage) {
           newPaginationRender.push(
             <button
+              key={i}
               className="_833p2h"
               onClick={() => props.goToPage(renderArray[i])}
             >
@@ -103,7 +105,7 @@ function PaginationNav(props) {
         }
         // render for elipsis (which separates groups of page number buttons)
         else {
-          newPaginationRender.push(<span className="_3bjjf5">…</span>);
+          newPaginationRender.push(<span key={i} className="_3bjjf5">…</span>);
         }
       }
       setPaginationRender(newPaginationRender);
