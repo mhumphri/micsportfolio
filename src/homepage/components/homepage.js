@@ -11,6 +11,12 @@ function Homepage() {
     <main className="portfoliolist-yu1">
       <div className="portfoliolist-ap7">
         <div className="portfoliolist-pp6">
+        <PortfolioItem
+          name="shop app"
+          lightBackground={true}
+          image={hotelAppImg}
+          href="/shop-app"
+        />
           <PortfolioItem
             name="hotel app"
             lightBackground={true}

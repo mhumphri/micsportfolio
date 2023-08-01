@@ -1,0 +1,49 @@
+.banner-cx7 {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  background-color: #FAFAFA;
+}
+
+.banner-iu5 {
+  padding-bottom: 25%;
+  min-height: 78px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-re2 {
+  min-height: 78px;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  position: absolute;
+}
+
+.banner-dw4 {
+  display: flex;
+  justify-content: center;
+}
+
+.banner-gh4 {
+  padding: 36px 12px 12px 12px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  max-width: 700px;
+}
+
+.banner-gh4.large-view {
+  padding: 50px 12px 26px 12px;
+}
+
+@media (min-width: 900px) {
+  .banner-gh4 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}

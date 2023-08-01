@@ -1,0 +1,302 @@
+.basket-bs8 {
+  display: flex;
+  margin-top: 10px;
+}
+
+.basket-bs8.mobile-view {
+  margin-top: 20px;
+}
+
+.basket-lk1 {
+  box-sizing: border-box;
+  max-width: calc(100% - 244px);
+  margin-right: 24px;
+}
+
+.basket-lk2 {
+  box-sizing: border-box;
+  width: calc(100% - 244px);
+  margin-right: 24px !important;
+}
+
+.basket-lk5 {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.basket-js3 {
+
+  display: flex;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.basket-js4 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.basket-kd4 {
+  box-sizing: border-box;
+  display: block !important;
+  width: 220px;
+  flex-shrink: 0;
+}
+
+.basket-kd5 {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.basket-ak7 {
+  display: flex;
+}
+
+
+
+/* product image styles */
+.basket-vl2 {
+flex: 1;
+margin-left: 16px;
+display: flex;
+flex-direction: column;
+ justify-content: space-between;
+}
+
+.basket-vl2.small-view {
+margin-left: 0px;
+}
+
+.basket-cb5 {
+  margin-top: 8px;
+}
+
+.basket-dj9 {
+    border-radius: 4px;
+  background-color: #faf9f5;
+  height: 200px;
+  width: 250px;
+}
+
+
+
+.basket-dj8 {
+    border-radius: 4px;
+  background-color: #faf9f5;
+height: 0px;
+  width: 100%;
+padding-bottom: 56.25%;
+}
+
+.basket-ks8 {
+  border-radius: 4px;
+  object-fit: cover;
+  height: 200px;
+  width: 250px;
+}
+
+.basket-ks9 {
+display: block;
+  border-radius: 4px;
+object-fit: cover;
+/*  height: 250px; */
+aspect-ratio: 16 / 9;
+  width: 100%;
+}
+
+/* product description */
+
+.basket-zu7 {
+	all: unset;
+	display: block;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 500;
+  overflow: hidden;
+display: -webkit-box;
+-webkit-line-clamp: 2; /* number of lines to show */
+        line-clamp: 2;
+-webkit-box-orient: vertical;
+}
+
+.basket-px2 {
+  display: flex;
+}
+
+.basket-px2.small-view {
+  justify-content: space-between;
+}
+
+.basket-dp6 {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.basket-dp6.lhs-margin {
+  margin-left: 8px;
+}
+
+.basket-fd2 {
+  margin-left: 24px;
+  display: flex;
+    align-items: center;
+}
+
+.basket-fd2.small-view {
+  margin-left: 6px;
+}
+
+.basket-hq1 {
+  margin-right: 6px;
+
+}
+
+.basket-hq1.small-view {
+  margin-right: 4px;
+    font-size: 14px;
+}
+
+.product-summary-dh2 {
+	all: unset;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 28px;
+}
+
+/* quantity, edit, remove row */
+.basket-hs3 {
+
+
+
+}
+
+.basket-ha1 {
+  display: flex;
+}
+
+
+
+/* delete and edit buttons */
+
+.basket-nn1 {
+width: 100%;
+height: 1px;
+box-shadow: 0 1px 0 rgb(0 0 0/8%);
+margin-top: 25px;
+margin-bottom: 25px;
+}
+
+.basket-nn1.small-view {
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+.basket-yu1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.basket-tr4 {
+  all: unset;
+  display: block;
+}
+
+.basket-hd4 {
+display: flex;
+align-items: center;
+padding: 6px 8px;
+border-radius: 24px;
+font-size: 14px;
+}
+
+.basket-hd4:hover {
+background-color: rgba(14,14,14,.0901960784);
+}
+
+.basket-bd6 {
+  margin-left: 2px;
+}
+
+.basket-gh3 {
+  margin-top: 10px;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.basket-mh4 {
+  padding: 5px 8px;
+  background-color: #D7E6F5;
+  margin-right: 10px;
+  margin-bottom: 6px;
+
+}
+
+/* costs tables */
+
+.basket-xn6 {
+width: 100%;
+}
+
+.basket-gt2 {
+  text-align: left;
+  width: 100%;
+}
+
+.basket-ar6 {
+  padding-bottom: 8px;
+}
+
+.basket-ar6.rhs {
+  text-align: right;
+}
+
+.basket-ar6.total {
+  padding-top: 8px;
+}
+
+.basket-pw1 {
+  all: unset;
+  text-decoration-line: underline;
+  font-weight: 400;
+}
+
+.basket-gw7 {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.basket-pl3 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 650px) {
+  .basket-ar6 {
+    padding-bottom: 15px;
+  }
+
+  .basket-ar6.reduced-padding {
+    padding-bottom: 0px;
+  }
+
+  .basket-ar6.total {
+    padding-top: 15px;
+  }
+}
+
+
+@media (min-width: 700px) {
+  .basket-kd4 {
+    width: 250px;
+  }
+  .basket-lk1 {
+    max-width: calc(100% - 274px);
+    margin-right: 12px;
+  }
+}

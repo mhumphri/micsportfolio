@@ -1,0 +1,22 @@
+.shop-app-tr2 {
+  margin-top: 60px;
+  margin-bottom: 24px;
+}
+
+.shop-app-te2 {
+padding: 12px 12px;
+max-width: 1400px;
+margin: 0 auto;
+margin-bottom: 24px;
+}
+
+.shop-app-te2.large-view {
+margin-bottom: 36px;
+}
+
+@media (min-width: 900px) {
+  .shop-app-te2 {
+  padding: 12px 24px;
+  max-width: 1200px;
+  }
+}

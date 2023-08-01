@@ -1,0 +1,72 @@
+.spinner {
+position: absolute;
+ border: 3px solid #f3f3f3;
+ border-top: 3px solid #DC0F63;
+ border-radius: 50%;
+ width: 20px;
+ height: 20px;
+ animation: spin 2s linear infinite;
+}
+
+.spinner.hidden {
+  visibility: hidden;
+}
+
+@keyframes spin {
+ 0% { transform: rotate(0deg); }
+ 100% { transform: rotate(360deg); }
+}
+
+.action-button-qq7 {
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	touch-action: manipulation;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 600;
+	border-radius: 96px;
+	outline: currentcolor none medium;
+	padding: 12px 24px;
+	transition: box-shadow 0.2s ease 0s, transform 0.1s ease 0s, transform 0.1s ease 0s;
+	border: medium none;
+	background: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%);
+	color: rgb(255, 255, 255);
+	width: 100%;
+}
+
+.action-button-qq7:active {
+	transform: scale(0.96);
+	border: medium none;
+	background: rgb(255, 56, 92);
+	color: rgb(255, 255, 255);
+}
+
+.action-button-qq7.large {
+  min-height: 48px;
+}
+
+.action-button-qq7.border-only {
+	padding: 11px 13px;
+  border: 1px solid #FF385C;
+  background: none;
+  background-color: #FFF;
+  color: #222;
+}
+
+.action-button-qq7.border-only:active {
+	transform: scale(0.96);
+}
+
+.action-button-sk9 {
+	line-height: 20px;
+}
+
+.action-button-sk9.hidden {
+	visibility: hidden;
+}

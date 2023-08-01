@@ -4,7 +4,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Navigate
+  Navigate,
 } from "react-router-dom";
 import {
   updateScreenDimensions,
@@ -14,6 +14,7 @@ import TopNav from "./navs/components/topNav";
 import Homepage from "./homepage/components/homepage";
 import Widgets from "./widgets/components/widgets";
 import HotelApp from "./hotelApp/components/hotelApp";
+import ShopApp from "./shopApp/shopApp";
 import HotelPage from "./hotelApp/components/hotelPage/hotelPage";
 import Modal from "./modal/components/modal";
 import DatepickersAll from "./datepicker/components/datepickersAll";
@@ -79,10 +80,21 @@ function App() {
           }
         />
         <Route
+          path="/shop-app"
+          element={
+            <>
+              <ShopApp />
+            </>
+          }
+        >
+          <Route path="product/:productID" />
+          <Route path="basket" />
+        </Route>
+        <Route
           path="hotel-app/hotels/:hotelId"
           element={
             <>
-            <HotelPage />
+              <HotelPage />
             </>
           }
         />
@@ -95,7 +107,7 @@ function App() {
             </>
           }
         />
-       <Route path="*" element={<Navigate to="/" replace />} />
+      {/*    <Route path="*" element={<Navigate to="/" replace />} /> */}
       </Routes>
       {mainModal ? <Modal /> : null}
     </Router>

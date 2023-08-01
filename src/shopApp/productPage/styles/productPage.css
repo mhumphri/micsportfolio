@@ -1,0 +1,15 @@
+.product-page-rt3 {
+  display: flex;
+  margin-top: 25px;
+}
+
+.product-page-io7 {
+  flex: 1;
+  padding-right: 30px;
+}
+
+.product-page-io8 {
+flex: 1;
+padding-right: 15px;
+padding-left: 15px;
+}
