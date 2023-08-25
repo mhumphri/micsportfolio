@@ -11,22 +11,26 @@ const [inputValue, setInputValue] = useState();
     return (
       <div className="dropdown-st42">
         <label className="dropdown-hq78">
-          xxxx
-          <span className="dropdown-mm33" />
+          {props.label}
+          {props.required ? <span className="dropdown-mm33" /> : null}
         </label>
-        <div className="dropdown-gw25">
+         <div className="dropdown-gw25">
           <select className="dropdown-nr45" value={inputValue} onChange={(event) => setInputValue(event.target.value)}>
-            <option value="" >
-                    Select an option
-                </option>
-                <option value="2993209637">
-                    2023
-                </option>
-                <option value="2993209638">
-                    2024
-                </option>
-
+            {props.optionsArray.map((x) => (
+              <option key={x.value} value={x.value}>
+                  {x.label}
+              </option>
+            ))}
           </select>
+        </div>
+        <div
+          className={
+            props.warning
+              ? "form-input-fw9"
+              : "form-input-fw9 hidden"
+          }
+        >
+          Please enter address line 2.
         </div>
       </div>
     );

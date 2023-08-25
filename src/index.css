@@ -7,6 +7,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   --site-color: #FF385C;
+
+  --shop-color-pink: #FF385C;
+  --shop-color-blue: rgb(56,92,255);
 /*
   overscroll-behavior: none;
   -webkit-overflow-scrolling: auto;

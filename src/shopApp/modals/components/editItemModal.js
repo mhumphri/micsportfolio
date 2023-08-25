@@ -1,11 +1,31 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import Dropdown from "../../widgets/components/dropdown";
 import ActionButton from "../../widgets/components/actionButton";
+import ProductOptions from "../../productPage/components/productOptions";
 import "../styles/basketModal.css";
 
-// modal which appears when a link to a hotel is clicked (in place of navigating to the page for the hotel)
+const optionsArray = [
+  { value: "a0", label: "select an option" },
+  { value: "a1", label: "option 1" },
+  { value: "a2", label: "option 2" },
+  { value: "a3", label: "option 3" },
+  { value: "a4", label: "option 4" },
+  { value: "a5", label: "option 5" },
+  { value: "a6", label: "option 6" },
+];
 
-function BasketModal(props) {
+const quantityArray = [
+  { value: "1", label: "1" },
+  { value: "2", label: "2" },
+  { value: "3", label: "3" },
+  { value: "4", label: "4" },
+  { value: "5", label: "5" },
+  { value: "6", label: "6" },
+  { value: "7", label: "7" },
+];
+
+function EditItemModal(props) {
   // modal backdrop CSS style - changes for animation
   const [backdropStyle, setBackdropStyle] = useState("link-modal-jr6");
   // modal outer container CSS setMapStyle - changes for animation
@@ -13,11 +33,16 @@ function BasketModal(props) {
   // hook for navigate fuction from react router - use to navigate whilst retaining redux state
   const navigate = useNavigate();
 
+  const [activeOption1, setActiveOption1] = useState(optionsArray[0]);
+
+  const [activeOption2, setActiveOption2] = useState(optionsArray[0]);
+
+  const [activeOption3, setActiveOption3] = useState(optionsArray[0]);
+
   const navigateToBasket = () => {
     document.body.style.overflow = "auto";
     document.body.style.position = "static";
     navigate("../basket");
-
   }
 
   // disables scrolling when the modal opens (component loads)
@@ -25,6 +50,21 @@ function BasketModal(props) {
     document.body.style.overflow = "hidden";
     document.body.style.position = "relative";
   }, []);
+
+
+
+  // click event listener which closes dropdown menu if user clicks outside searchnav / dropdown list (large view only)
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      console.log("KEY DOWN!!: " + e.code)
+      console.log("document.activeElement: " + document.activeElement )
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  });
 
 
   const closeModal = () => {
@@ -72,17 +112,11 @@ function BasketModal(props) {
         </div>
         <div className="link-modal-z4l">
         <header className="link-modal-sj7">
-          <div className="link-modal-lw2">1 item added to basket</div>
+          <div className="link-modal-lw2">edit item</div>
         </header>
-        <div className="basket-modal-rt6">
-        <svg className="basket-modal-vr3" width="70px" height="70px" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path style={{fill: "#699f4c", fillRule: "evenodd"}} d="M800,510a30,30,0,1,1,30-30A30,30,0,0,1,800,510Zm-16.986-23.235a3.484,3.484,0,0,1,0-4.9l1.766-1.756a3.185,3.185,0,0,1,4.574.051l3.12,3.237a1.592,1.592,0,0,0,2.311,0l15.9-16.39a3.187,3.187,0,0,1,4.6-.027L817,468.714a3.482,3.482,0,0,1,0,4.846l-21.109,21.451a3.185,3.185,0,0,1-4.552.03Z" id="check" transform="translate(-770 -450)"/></svg>
-        <div className="basket-modal-fd2">
-          <div className="basket-modal-fd3">
-        <ActionButton message={"Go to basket"} clickFunction={navigateToBasket} />
-        </div>
+        <div className="edit-item-modal-xc3">
 
-        <ActionButton message={"Continue shopping"} borderOnly={true} clickFunction={closeModal} />
-        </div>
+<ProductOptions editItems={true} />
 
         </div>
         </div>
@@ -92,4 +126,4 @@ function BasketModal(props) {
   );
 }
 
-export default BasketModal;
+export default EditItemModal;

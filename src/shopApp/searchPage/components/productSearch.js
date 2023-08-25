@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { categoryArray, itemsArray } from "./data";
 import ActionButton from "../../widgets/components/actionButton";
+import BasketButton from "../../widgets/components/basketButton";
+import ContactButton from "../../widgets/components/contactButton";
 import "../styles/productSearch.css";
 
 function ProductSearch(props) {
@@ -29,7 +31,7 @@ function ProductSearch(props) {
 
 
 
-  // 
+  //
   useEffect(() => {
     if (categoryMenuRef.current) {
       setCategoryMenuWidth(
@@ -85,6 +87,7 @@ function ProductSearch(props) {
         <div className="product-search-pa1">
           <div className="product-search-bs8">
             <div className="product-search-kd4">
+              <div className="product-search-dw6">
               <ul className="product-search-kj3">
                 {categoryArray.map((x) => (
                   <button
@@ -100,6 +103,14 @@ function ProductSearch(props) {
                   </button>
                 ))}
               </ul>
+              <div>
+
+                <p className="product-search-jw5">Can't find what you're looking for?</p>
+                <div className="product-search-uw7">
+                <ContactButton />
+                </div>
+              </div>
+            </div>
             </div>
             <div className="product-search-lk1">
               <div className="product-search-ty1">
@@ -139,7 +150,7 @@ function ProductSearch(props) {
   } else {
     return (
       <section>
-        <div className="product-search-pa1">
+        <div className="product-search-xd3">
           <div className="product-search-sm4">
             <button
               className={
@@ -191,6 +202,9 @@ function ProductSearch(props) {
               ))}
             </div>
           </div>
+          <div className="product-search-hd5">
+            <BasketButton />
+          </div>
         </div>
         <div className="product-search-cv2">
           <div className="product-search-ty1">
@@ -221,6 +235,13 @@ function ProductSearch(props) {
                 </Link>
               </div>
             ))}
+            <div className="product-search-ke9">
+
+              <p className="product-search-jw5">Can't find what you're looking for?</p>
+              <div className="product-search-uw7">
+              <ContactButton />
+              </div>
+            </div>
           </div>
         </div>
       </section>

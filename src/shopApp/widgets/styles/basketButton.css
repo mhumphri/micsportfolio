@@ -1,0 +1,31 @@
+.basket-button-ja1 {
+  position: relative;
+  padding: 5px;
+  display: block;
+  cursor: pointer;
+  border-radius: 999999px;
+}
+
+.basket-button-gr4 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 999999px;
+  /* background-color: #FF395D; */
+  background-color: var(--shop-color-pink);
+color: #fff;
+font-size: 11px;
+font-weight: bold;
+min-width: 17px;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 6px;
+padding-right: 6px;
+display: inline-block;
+word-break: break-word;
+line-height: 1;
+}
+
+.basket-button-ja1:hover {
+background-color: rgba(14,14,14,.0901960784);
+}

@@ -1,0 +1,19 @@
+.currency-button-hd4 {
+  all: unset;
+display: flex;
+align-items: center;
+padding: 4px 6px;
+border-radius: 24px;
+font-size: 14px;
+font-weight: 600;
+height: auto;
+  cursor: pointer;
+}
+
+.currency-button-hd4:hover {
+background-color: rgba(14,14,14,.0901960784);
+}
+
+.currency-button-bd6 {
+  margin-left: 2px;
+}

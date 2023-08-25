@@ -1,8 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Header from "../../header/components/header";
 import Dropdown from "../../widgets/components/dropdown";
 import ActionButton from "../../widgets/components/actionButton";
+import RemoveItemModal from "../../modals/components/removeItemModal";
+import EditItemModal from "../../modals/components/editItemModal";
 
 import "../styles/basket.css";
 
@@ -19,6 +21,10 @@ const itemArray = [1, 2, 3];
 function Basket() {
   // viewport width (stored in redux)
   const screenWidth = useSelector((state) => state.deviceData.screenWidth);
+  // boolean controlling state of remove item modal
+  const [removeItemModalActive, setRemoveItemModalActive] = useState();
+  // boolean controlling state of remove item modal
+  const [editItemModalActive, setEditItemModalActive] = useState();
 
   const updateQuantity = () => {
     console.log("updateQuantity");
@@ -59,7 +65,7 @@ function Basket() {
             </tbody>
           </table>
           <div className={mobileView ? "basket-ne9 mobile-view" : "basket-ne9"}>
-            <ActionButton message="Checkout" large={true} />
+            <ActionButton message="Checkout" navigate="../address-form" />
           </div>
         </div>
       </div>,
@@ -69,7 +75,7 @@ function Basket() {
   const editDeleteButtons =  [
       <div className="basket-hs3">
         <div className="basket-ha1">
-          <a className="basket-hd4">
+          <button className="basket-hd4" onClick={() => setRemoveItemModalActive(true)}>
             <svg
               width="20px"
               height="20px"
@@ -114,8 +120,8 @@ function Basket() {
               />
             </svg>
             <span className="basket-bd6">remove</span>
-          </a>
-          <a className="basket-hd4">
+          </button>
+          <button className="basket-hd4" onClick={() => setEditItemModalActive(true)}>
             <svg
               width="18px"
               height="18px"
@@ -131,7 +137,7 @@ function Basket() {
               />
             </svg>
             <span className="basket-bd6">edit</span>
-          </a>
+          </button>
         </div>
       </div>,
     ];
@@ -183,98 +189,106 @@ function Basket() {
     ];
   };
 
-  if (screenWidth < 650) {
-    return (
-      <>
-        <Header largeView={true}/>
-        <main className="shop-app-te2">
-          {totalsTable("mobileView")}
-          <div className="basket-bs8 mobile-view">
-            <div className="basket-lk5">
-              {itemArray.map((x, i, itemArray) => (
-                <>
-                  <div className="basket-js4">
-                    <div className="basket-dj8">
-                      <img
-                        className="basket-ks9"
-                        src="https://i.etsystatic.com/34623276/c/2303/1831/246/127/il/db2bf5/4065269795/il_340x270.4065269795_928b.jpg"
-                      />
+  const getModalContent = (screenWidth) => {
+    if (screenWidth < 650) {
+      return (
+          <main className="shop-app-te2">
+            {totalsTable("mobileView")}
+            <div className="basket-bs8 mobile-view">
+              <div className="basket-lk5">
+                {itemArray.map((x, i, itemArray) => (
+                  <>
+                    <div className="basket-js4">
+                      <div className="basket-dj8">
+                        <img
+                          className="basket-ks9"
+                          src="https://i.etsystatic.com/34623276/c/2303/1831/246/127/il/db2bf5/4065269795/il_340x270.4065269795_928b.jpg"
+                        />
+                      </div>
+                      {productDetails("mobile")}
                     </div>
-                    {productDetails("mobile")}
-                  </div>
-                  <div
-                    className={
+                    <div
+                      className={
+                        i !== itemArray.length - 1 ? "basket-nn1 small-view" : ""
+                      }
+                    />
+                  </>
+                ))}
+              </div>
+            </div>
+          </main>
+      );
+    } else if (screenWidth < 900) {
+      return (
+          <main className="shop-app-te2">
+            <div className="basket-bs8">
+              <div className="basket-lk2">
+                {itemArray.map((x, i, itemArray) => (
+                  <>
+                    <div className="basket-js4">
+                      <div className="basket-dj8">
+                        <img
+                          className="basket-ks9"
+                          src="https://i.etsystatic.com/34623276/c/2303/1831/246/127/il/db2bf5/4065269795/il_340x270.4065269795_928b.jpg"
+                        />
+                      </div>
+                      {productDetails("small")}
+                    </div>
+                    <div
+                      className={
+                        i !== itemArray.length - 1 ? "basket-nn1 small-view" : ""
+                      }
+                    />
+                  </>
+                ))}
+              </div>
+              {totalsTable()}
+            </div>
+          </main>
+      );
+    } else {
+      return (
+          <main className="shop-app-te2">
+            <div className="basket-bs8">
+              <div className="basket-lk1">
+                {itemArray.map((x, i, itemArray) => (
+                  <>
+                    <div className="basket-js3">
+                      <div className="basket-dj9">
+                        <img
+                          className="basket-ks8"
+                          src="https://i.etsystatic.com/34623276/c/2303/1831/246/127/il/db2bf5/4065269795/il_340x270.4065269795_928b.jpg"
+                        />
+                      </div>
+                      {productDetails()}
+                    </div>
+                    <div className={
                       i !== itemArray.length - 1 ? "basket-nn1 small-view" : ""
-                    }
-                  />
-                </>
-              ))}
+                    } />
+                  </>
+                ))}
+              </div>
+              {totalsTable()}
             </div>
-          </div>
-        </main>
-      </>
-    );
-  } else if (screenWidth < 900) {
-    return (
-      <>
-        <Header largeView={true} productPage={true} />
-        <main className="shop-app-te2">
-          <div className="basket-bs8">
-            <div className="basket-lk2">
-              {itemArray.map((x, i, itemArray) => (
-                <>
-                  <div className="basket-js4">
-                    <div className="basket-dj8">
-                      <img
-                        className="basket-ks9"
-                        src="https://i.etsystatic.com/34623276/c/2303/1831/246/127/il/db2bf5/4065269795/il_340x270.4065269795_928b.jpg"
-                      />
-                    </div>
-                    {productDetails("small")}
-                  </div>
-                  <div
-                    className={
-                      i !== itemArray.length - 1 ? "basket-nn1 small-view" : ""
-                    }
-                  />
-                </>
-              ))}
-            </div>
-            {totalsTable()}
-          </div>
-        </main>
-      </>
-    );
-  } else {
-    return (
-      <>
-        <Header largeView={true} productPage={true} />
-        <main className="shop-app-te2">
-          <div className="basket-bs8">
-            <div className="basket-lk1">
-              {itemArray.map((x, i, itemArray) => (
-                <>
-                  <div className="basket-js3">
-                    <div className="basket-dj9">
-                      <img
-                        className="basket-ks8"
-                        src="https://i.etsystatic.com/34623276/c/2303/1831/246/127/il/db2bf5/4065269795/il_340x270.4065269795_928b.jpg"
-                      />
-                    </div>
-                    {productDetails()}
-                  </div>
-                  <div className={
-                    i !== itemArray.length - 1 ? "basket-nn1 small-view" : ""
-                  } />
-                </>
-              ))}
-            </div>
-            {totalsTable()}
-          </div>
-        </main>
-      </>
-    );
+          </main>
+      );
+    }
   }
+
+
+    return (
+      <>
+        <Header largeView={true} productPage={true} />
+        {getModalContent(screenWidth)}
+        { removeItemModalActive ?
+        <RemoveItemModal setBasketModalActive={setRemoveItemModalActive} /> : null
+        }
+        { editItemModalActive ?
+        <EditItemModal setBasketModalActive={setEditItemModalActive} /> : null
+        }
+      </>
+    );
+
 }
 
 export default Basket;

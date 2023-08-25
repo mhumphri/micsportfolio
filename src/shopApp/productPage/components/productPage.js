@@ -8,7 +8,7 @@ import ProductSummary from "./productSummary";
 import ProductOptions from "./productOptions";
 import ProductDescription from "./productDescription";
 import ProductSpecs from "./productSpecs";
-import BasketModal from "./basketModal";
+import BasketModal from "../../modals/components/basketModal";
 import "../styles/productPage.css";
 
 const imageArray = [
@@ -75,7 +75,7 @@ function ProductPage(props) {
             <div className="product-page-io8"><ProductOptions largeView={true} setBasketModalActive={setBasketModalActive} /></div>
           </div>
         </main>
-        <Footer />
+        {/* <Footer /> */}
 
       </>)
     }

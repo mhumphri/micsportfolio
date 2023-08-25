@@ -14,25 +14,25 @@ function SearchPage() {
 
   if (screenWidth < 900) {
     return (
-      <>
-        <Header />
+      <div className="search-page-zu4">
+        <Header largeView={true} noBasket={true} />
         <main className="search-page-tr2">
           <Banner />
           <ProductSearch />
         </main>
         <Footer />
-      </>
+      </div>
     );
   } else {
     return (
-      <>
+      <div className="search-page-zu4">
         <Header largeView={true} />
         <main>
           <Banner largeView={true} />
           <ProductSearch largeView={true} />
         </main>
         <Footer />
-      </>
+      </div>
     );
   }
 }

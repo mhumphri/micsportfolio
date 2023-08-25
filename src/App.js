@@ -89,6 +89,8 @@ function App() {
         >
           <Route path="product/:productID" />
           <Route path="basket" />
+          <Route path="address-form" />
+          <Route path="payment-form" />
         </Route>
         <Route
           path="hotel-app/hotels/:hotelId"
